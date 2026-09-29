@@ -1,0 +1,86 @@
+/* Typography and spacing follow https://yfchen1994.github.io/. */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/nunito-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/nunito-bold.ttf") format("truetype");
+}
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  background: #fff;
+}
+a { color: #4285f4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid #4285f4; outline-offset: 4px; }
+.page { max-width: 900px; margin: auto; }
+.skip-link { position: absolute; top: -80px; left: 20px; padding: 8px 15px; background: white; z-index: 10; }
+.skip-link:focus { top: 10px; }
+.topbar { padding: 50px 0 26px; border-bottom: 1px solid rgba(0, 0, 0, .1); }
+nav { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 20px; padding: 5px 0; }
+.profile { padding-bottom: 16px; }
+h1, h2 {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 19.92px 0;
+}
+h3 { font-size: 16px; margin: 16px 0 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 700; }
+.position, .affiliation { font-weight: 400; margin: 0; }
+.contact { margin: 0; }
+.contact a { color: #000; overflow-wrap: anywhere; }
+section { border-top: 1px solid rgba(0, 0, 0, .1); padding: 0 0 8px; }
+.research-topics { list-style: none; margin: 16px 0; padding: 0; }
+.research-topics li { display: inline; }
+.research-topics li:not(:last-child)::after { content: " · "; }
+.section-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 8px; margin: 19.92px 0; }
+.section-heading h2 { margin: 0; }
+.section-note { font-size: 16px; font-weight: 400; }
+.publications { list-style-type: disc; padding: 0 20px; margin: 16px 0; }
+.publication { margin: 16px 0; }
+.paper-title, .authors, .paper-detail { font-size: 16px; font-weight: 400; line-height: normal; }
+.paper-title { font-weight: 700; }
+.distinction { display: block; font-weight: 700; margin-top: 4px; }
+.timeline { padding: 0 20px; margin: 16px 0; }
+.timeline li { margin: 12px 0; }
+.timeline .date { display: block; }
+.detail { display: block; }
+.service-list { padding: 0 20px; margin: 8px 0 16px; }
+.service-list li { margin: 5px 0; }
+.awards li { margin: 5px 0; }
+.awards .date { display: inline; }
+.awards .date::before { content: ", "; }
+.awards li > div { display: inline; }
+.teaching-title { margin-bottom: 0; }
+#teaching > .detail { margin-top: 0; }
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid rgba(0, 0, 0, .1); padding: 16px 0 24px; }
+@media (max-width: 800px) { .page { max-width: 600px; } }
+@media (max-width: 650px) { .page { max-width: 83%; } }
+@media (max-width: 500px) {
+  .topbar { padding: 50px 0 10px; }
+  nav { justify-content: center; gap: 8px 14px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  .page { max-width: 100%; }
+  .topbar, .skip-link, footer a { display: none; }
+  .publication, .timeline li { break-inside: avoid; }
+}

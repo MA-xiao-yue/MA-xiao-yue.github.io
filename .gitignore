@@ -1,0 +1,22 @@
+# Private source documents — never publish these.
+*.pdf
+*.doc
+*.docx
+*.tex
+*.bib
+Resume*
+CV*
+private/
+review/
+
+# Local files and generated output.
+.DS_Store
+__pycache__/
+node_modules/
+.venv/
+*.log
+.env
+.env.*
+
+# Local-only preview server.
+preview.py
